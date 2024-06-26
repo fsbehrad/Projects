@@ -17,8 +17,9 @@ class Handler:
 
     def get_report(self):
         for adv in self.ADVERTISEMENT_TYPES.values():
-            print(adv, adv.manager.count())
-
+            for obj in adv.objects_list:
+                print(obj.show(), adv.manager.count())
+        print("\n")
     def show_all(self):
         for adv in self.ADVERTISEMENT_TYPES.values():
             # print(adv, adv.manager.count())
